@@ -11,16 +11,32 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Estructuras de Control
+            Sentencias de control Selectivas
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="estructura1.php">IF, ELSE</a></li>
             <li><a class="dropdown-item" href="estructura2.php">ELSEIF</a></li>
             <li><a class="dropdown-item" href="estructura3.php">SWITCH</a></li>
-            <li><a class="dropdown-item" href="estructura4.php">SWITCH 1</a></li>
-            <li><a class="dropdown-item" href="estructura5.php">SWITCH 2</a></li>
-
-            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="estructura4.php">SWITCH V.2</a></li>
+            <li><a class="dropdown-item" href="estructura5.php">SWITCH V.3</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sentencias de control Repetitivas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="estructura6.php">WHILE</a></li>
+            <li><a class="dropdown-item" href="estructura7.php"> DO WHILE</a></li>
+            <li><a class="dropdown-item" href="estructura8.php"> FOR</a></li>
+            <li><a class="dropdown-item" href="estructura9.php"> ARRAY</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
