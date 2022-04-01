@@ -19,28 +19,29 @@
                 <?php
                 include('config.php');
                 session_start();
-                if (isset($_POST['registro'])) {
+                if (isset($_POST['registro_cliente'])) {
 
-                    $username = $_POST['usuario'];
-                    $email = $_POST['email'];
-                    $password = $_POST['password'];
-                    $password_hash = password_hash($password, PASSWORD_BCRYPT);
-                    $query = $conn->prepare("SELECT * FROM tbl_usuario WHERE email=:email");
-                    $query->bindParam("email", $email, PDO::PARAM_STR);
+                    $nombre = $_POST['nombre'];
+                    $direccion = $_POST['direccion'];
+                    $telefono = $_POST['telefono'];
+                    $dui=$_POST['dui'];
+                    $query = $conn->prepare("SELECT * FROM tbl_cliente WHERE dui=:dui");
+                    $query->bindParam("dui", $dui, PDO::PARAM_STR);
                     $query->execute();
 
                     if ($query->rowCount() > 0) {
                         echo '
                         <div class="alert alert-danger" role="alert">
-                        ¡La dirección de correo electrónico ya está registrada!
+                        ¡El numero de dui ya está registrado!
                         </div>';
                     }
 
                     if ($query->rowCount() == 0) {
-                        $query = $conn->prepare("INSERT INTO tbl_usuario(username,password,email) VALUES (:username,:password_hash,:email)");
-                        $query->bindParam("username", $username, PDO::PARAM_STR);
-                        $query->bindParam("password_hash", $password_hash, PDO::PARAM_STR);
-                        $query->bindParam("email", $email, PDO::PARAM_STR);
+                        $query = $conn->prepare("INSERT INTO tbl_cliente(nombre,direccion,telefono,dui) VALUES (:nombre,:direccion,:telefono,:dui)");
+                        $query->bindParam("nombre", $nombre, PDO::PARAM_STR);
+                        $query->bindParam("direccion", $direccion, PDO::PARAM_STR);
+                        $query->bindParam("telefono", $telefono, PDO::PARAM_STR);
+                        $query->bindParam("dui", $dui, PDO::PARAM_STR);
                         $result = $query->execute();
 
                         if ($result) {
