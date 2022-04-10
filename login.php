@@ -15,7 +15,7 @@ if (isset($_POST['login'])) {
         header("location: index.php");
     } else {
         if (password_verify($password, $result['password'])) {
-            $_SESSION['user_id'] = $result['id_usuario'];
+            $_SESSION['user_id'] = $result['id'];
             header("location: principal.php");
         } else {
             header("location: index.php");

@@ -15,7 +15,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="new_cliente.php">Nuevo Cliente</a></li>
-            <li><a class="dropdown-item" href="estructura2.php">Administracion</a></li>
+            <li><a class="dropdown-item" href="admi_cliente.php">Administracion de cliente</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
